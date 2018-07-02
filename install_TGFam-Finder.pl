@@ -21,6 +21,13 @@ system("perl -pi -e 's|setTGFamSoftLoc|$stTGFamSoftLoc|g' tgfam_install_ubuntu.s
 system("cp -rf ./test_sample/PROGRAM_PATH_sample.config ./test_sample/PROGRAM_PATH_test.config");
 system("perl -pi -e 's|setTGFamSoftLoc|$stTGFamSoftLoc|g' ./test_sample/PROGRAM_PATH_test.config");
 
+	$rc =~ s/\s+//g;
+        if ($rc =~ /N/i){
+		system("perl -pi -e 's|$stTGFamSoftLoc/interproscan-5.22-61.0||g' ./test_sample/PROGRAM_PATH_test.config");
+	} else {
+	}
+
+
 system("cp -rf ./test_sample/RESOURCE_sample.config ./test_sample/RESOURCE_test.config");
 system("perl -pi -e 's|setTGFamSoftLoc|$stTGFamSoftLoc|g' ./test_sample/RESOURCE_test.config");
 
@@ -38,7 +45,7 @@ system("mv tgfam_install_ubuntu.sh $stTGFamSoftLoc/");
 system(". $stTGFamSoftLoc/tgfam_install_ubuntu.sh");
 
 sub printUsage {
-	print "TGFam-Finder Installation for CentOS User\n";
+	print "TGFam-Finder Installation for Ubuntu User\n";
 	print "Help : perl tgfam_install.pl -h\n";
 	print "Usage : perl tgfam_install.pl [Absolute Path for TGFam-Finder_Install_Location]\n";
 	print "    ex) perl tgfam_install.pl /home/TGFam\n";
