@@ -52,8 +52,10 @@ apt-get -y install libncurses5-dev libncursesw5-dev;
 apt-get -y install libtbb;
 
 ## AUGUSTUS ##
-make -C /root/app/augustus-3.2.3/src/
-export AUGUSTUS_CONFIG_PATH=/root/app/augustus-3.2.3/config/
+make -C /root/app/augustus-3.2.3/src/;
+export AUGUSTUS_CONFIG_PATH=/root/app/augustus-3.2.3/config/;
+chmod 777 setTGFamSoftLoc/augustus-3.2.3/config;
+chmod 777 setTGFamSoftLoc/augustus-3.2.3/config/species;
 
 ## Hmmer ##
 cd setTGFamSoftLoc/hmmer-3.1b2-linux-intel-x86_64;
