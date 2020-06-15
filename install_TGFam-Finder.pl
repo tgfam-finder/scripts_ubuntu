@@ -9,6 +9,7 @@ if (@ARGV !=1 || $ARGV[0] eq "-h") {
         print "\nInterProScan installation file takes a long time to download because of its large capacity.\n";
         print "If the internet environment is not good, install it as 'N' if possible, and install InterProScan separately.\n\n";
         print color('reset');
+
 	print "Do you want full-installation (Y:full-installation, N:Excluding InterProScan)? (Y/N)\n";
 	my $rc = <STDIN>;
 	$rc =~ s/\s+//g;

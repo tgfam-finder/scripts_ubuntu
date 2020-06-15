@@ -44,10 +44,12 @@ apt-get -y install zlib1g-dev;
 apt-get -y install libpng-dev;
 apt-get -y install libncurses5-dev libncursesw5-dev;
 apt-get -y install libtbb;
+apt-get -y install make;
+apt-get -y install g++;
 
 ## AUGUSTUS ##
-make -C /root/app/augustus-3.2.3/src/;
-export AUGUSTUS_CONFIG_PATH=/root/app/augustus-3.2.3/config/;
+make -C setTGFamSoftLoc/augustus-3.2.3/src/;
+export AUGUSTUS_CONFIG_PATH=setTGFamSoftLoc/augustus-3.2.3/config/;
 chmod 777 setTGFamSoftLoc/augustus-3.2.3/config;
 chmod 777 setTGFamSoftLoc/augustus-3.2.3/config/species;
 
